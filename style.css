@@ -53,7 +53,7 @@ h3 {
 }
 
 h1 {
-    font-size: clamp(3.4rem, 7vw, 7rem);
+    font-size: clamp(2.8rem, 5vw, 5rem);
     letter-spacing: -0.07em;
 }
 
@@ -129,23 +129,47 @@ h3 {
     display: flex;
     min-height: 790px;
     align-items: center;
+    overflow: hidden;
     background:
         linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.96),
-            rgba(0, 0, 0, 0.64)
-        ),
-        url("images/hero-bg.jpg");
-    background-position: center;
-    background-size: cover;
+            135deg,
+            #080808,
+            #111111
+        );
 }
 
 .hero-content {
     padding: 110px 0;
 }
 
+.hero-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.hero-text-column {
+    flex: 0 1 65%;
+    max-width: 700px;
+}
+
+.hero-logo-column {
+    flex: 0 1 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo-large {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .hero h1 {
-    max-width: 930px;
+    max-width: 760px;
     margin-bottom: 24px;
 }
 
@@ -729,6 +753,15 @@ h3 {
     font-size: 0.9rem;
 }
 
+.news-link {
+    color: var(--scarlet-light);
+    font-weight: 700;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
 /* Footer */
 
 .site-footer {
@@ -771,6 +804,18 @@ h3 {
     color: var(--scarlet-light);
 }
 
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-logo {
+    width: 58px;
+    height: auto;
+    display: block;
+}
+
 /* Tablet layout */
 
 @media (max-width: 900px) {
@@ -787,6 +832,20 @@ h3 {
 
     .hero {
         min-height: 680px;
+    }
+
+    .hero-split {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .hero-logo-large {
+        width: 240px;
+    }
+
+    .button-row {
+        justify-content: center;
     }
 
     .split-layout,
@@ -840,6 +899,14 @@ h3 {
         padding: 80px 0;
     }
 
+    .hero-logo-large {
+        width: 190px;
+    }
+
+    .hero-content {
+        padding: 80px 0;
+    }
+
     .image-panel {
         min-height: 290px;
     }
@@ -847,5 +914,9 @@ h3 {
     .footer-layout {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .footer-brand {
+        align-items: flex-start;
     }
 }
