@@ -18,6 +18,12 @@
     --dark-border: rgba(255, 255, 255, 0.16);
 
     --shadow: 0 16px 42px rgba(0, 0, 0, 0.18);
+
+    /* Club logo palette */
+    --ctc-navy: #0b376f;
+    --ctc-cream: #f4e6d4;
+    --ctc-cream-soft: #fbf5ed;
+    --ctc-logo-border: rgba(244, 230, 212, 0.28);
 }
 
 * {
@@ -104,6 +110,11 @@ h3 {
     height: 42px;
     width: auto;
     display: block;
+    flex: 0 0 auto;
+    object-fit: contain;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .nav-links {
@@ -131,11 +142,8 @@ h3 {
     align-items: center;
     overflow: hidden;
     background:
-        linear-gradient(
-            135deg,
-            #080808,
-            #111111
-        );
+        radial-gradient(circle at 82% 45%, rgba(11, 55, 111, 0.38), transparent 32%),
+        linear-gradient(135deg, #080808, #111111);
 }
 
 .hero-content {
@@ -146,26 +154,51 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: clamp(42px, 6vw, 88px);
 }
 
 .hero-text-column {
-    flex: 0 1 65%;
+    flex: 1 1 58%;
     max-width: 700px;
 }
 
 .hero-logo-column {
-    flex: 0 1 35%;
+    flex: 1 1 42%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.hero-logo-frame {
+    position: relative;
+    width: min(100%, 560px);
+    padding: clamp(9px, 1.4vw, 15px);
+    border: 1px solid rgba(244, 230, 212, 0.24);
+    border-radius: 32px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015)),
+        rgba(5, 27, 58, 0.38);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+    isolation: isolate;
+}
+
+.hero-logo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 8% -7% -8% 12%;
+    z-index: -1;
+    border-radius: 50%;
+    background: rgba(204, 0, 0, 0.13);
+    filter: blur(38px);
+}
+
 .hero-logo-large {
-    width: 600px;
+    display: block;
+    width: 100%;
     max-width: 100%;
     height: auto;
-    display: block;
+    border-radius: 22px;
+    background: var(--ctc-cream);
 }
 
 .hero h1 {
@@ -433,6 +466,46 @@ h3 {
 
 .news-item p {
     color: rgba(255, 255, 255, 0.63);
+}
+
+
+/* Clickable news-feed rows */
+
+.news-item-clickable {
+    position: relative;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        padding-left 0.2s ease,
+        padding-right 0.2s ease;
+}
+
+.news-item-clickable:hover,
+.news-item-clickable:focus-within {
+    padding-left: 16px;
+    padding-right: 16px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.news-item-clickable h3 {
+    transition: color 0.2s ease;
+}
+
+.news-item-clickable:hover h3,
+.news-item-clickable:focus-within h3 {
+    color: var(--scarlet-light);
+}
+
+.news-item-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.news-item-overlay:focus-visible {
+    outline: 2px solid var(--scarlet-light);
+    outline-offset: 4px;
 }
 
 /* Upcoming meeting */
@@ -811,9 +884,13 @@ h3 {
 }
 
 .footer-logo {
-    width: 58px;
-    height: auto;
     display: block;
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: var(--ctc-cream);
+    box-shadow: 0 0 0 1px rgba(244, 230, 212, 0.2);
 }
 
 /* Tablet layout */
@@ -840,8 +917,12 @@ h3 {
         gap: 2.5rem;
     }
 
+    .hero-logo-frame {
+        width: min(78vw, 470px);
+    }
+
     .hero-logo-large {
-        width: 240px;
+        width: 100%;
     }
 
     .button-row {
@@ -899,8 +980,23 @@ h3 {
         padding: 80px 0;
     }
 
+    .hero-logo-column {
+        margin-top: 12px;
+    }
+
+    .hero-logo-frame {
+        width: min(88vw, 430px);
+        border-radius: 22px;
+    }
+
     .hero-logo-large {
-        width: 190px;
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    .footer-logo {
+        width: 62px;
+        height: 62px;
     }
 
     .hero-content {
@@ -919,4 +1015,7 @@ h3 {
     .footer-brand {
         align-items: flex-start;
     }
+}
+
+@media (max-width: 430px) {
 }
