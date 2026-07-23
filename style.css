@@ -137,17 +137,47 @@ h3 {
 /* Hero */
 
 .hero {
-    display: flex;
-    min-height: 790px;
-    align-items: center;
+    position: relative;
     overflow: hidden;
-    background:
-        radial-gradient(circle at 82% 45%, rgba(11, 55, 111, 0.38), transparent 32%),
-        linear-gradient(135deg, #080808, #111111);
+    isolation: isolate;
 }
 
+/* Background image */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("images/bu-bckgr.jpg") center center / cover no-repeat;
+
+    filter: blur(8px);
+    transform: scale(1.08); /* prevents blur from showing edges */
+
+    z-index: -2;
+}
+
+/* Dark overlay for readability */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(10, 18, 32, 0.68);
+
+    z-index: -1;
+}
+
+/* Keep content above background */
 .hero-content {
-    padding: 110px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 0;
 }
 
 .hero-split {
