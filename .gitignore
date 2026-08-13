@@ -1,0 +1,47 @@
+# ============================================
+# BU Commodities Trading Club
+# ============================================
+
+# Operating system files
+.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.log
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local development
+.wrangler/
+.dev.vars
+
+# Python cache, if scripts are ever used locally
+__pycache__/
+*.py[cod]
+
+# Node dependencies, if tooling is added later
+node_modules/
+
+# Build/cache directories
+.cache/
+.parcel-cache/
+
+# Local archives / backups
+*.zip
+*.tar
+*.tar.gz
