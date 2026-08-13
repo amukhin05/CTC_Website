@@ -19,6 +19,22 @@
 
 <header class="site-header">
     <nav class="navbar container">
+        <details class="mobile-menu">
+            <summary aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </summary>
+
+            <div class="mobile-menu-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="notes.html">Meeting Notes</a>
+                <a href="competitions.html">Competitions</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="resources.html">Resources</a>
+            </div>
+        </details>
         <a class="logo" href="index.html">
             <img class="logo-image" src="images/bu-logo.jpg" alt="Boston University logo">
             <span class="club-brand-copy">
@@ -107,16 +123,21 @@
             </div>
 
             <div class="news-list">
-                <article class="news-item">
+                <article class="news-item challenge-news-item">
                     <span>Copper</span>
                     <h3>The Metal Powering AI and Electrification</h3>
                     <p>
                         Despite growing to one of the most important commodities,
-                        copper supply is still very sensitive. 
+                        copper supply is still very sensitive.
                     </p>
                     <a class="news-link" href="challenges.html">
                         See challenge →
                     </a>
+                    <a
+                        class="mobile-news-item-overlay"
+                        href="challenges.html"
+                        aria-label="View the copper challenge"
+                    ></a>
                 </article>
 
                 <article class="news-item news-item-clickable">
