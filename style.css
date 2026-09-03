@@ -1453,3 +1453,462 @@ h3 {
         gap: 18px;
     }
 }
+
+/* =========================================================
+   MAILING LIST PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   Main Section
+   ========================================================= */
+
+.mailing-section {
+    min-height: calc(100vh - 80px);
+
+    padding-top: clamp(80px, 9vw, 120px);
+    padding-bottom: clamp(80px, 9vw, 120px);
+
+    background: var(--off-white);
+    color: var(--text-dark);
+}
+
+
+/* =========================================================
+   Two-Column Layout
+   ========================================================= */
+
+.mailing-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(400px, 1.15fr);
+
+    align-items: start;
+
+    gap: clamp(55px, 8vw, 100px);
+}
+
+
+/* =========================================================
+   Left-Side Content
+   ========================================================= */
+
+.mailing-copy {
+    padding-top: 12px;
+}
+
+.mailing-copy h2 {
+    margin-bottom: 24px;
+}
+
+.mailing-copy-text {
+    max-width: 520px;
+
+    margin-bottom: 30px;
+
+    color: #4e4e4e;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   Benefits
+   ========================================================= */
+
+.mailing-benefits {
+    display: grid;
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+.mailing-benefit {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #444444;
+
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.mailing-benefit-marker {
+    width: 8px;
+    height: 8px;
+
+    margin-top: 7px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: var(--scarlet);
+}
+
+
+/* =========================================================
+   Signup Card
+   ========================================================= */
+
+.mailing-card {
+    padding: clamp(28px, 4vw, 42px);
+
+    border: 1px solid var(--light-border);
+
+    border-radius: 18px;
+
+    background: var(--white);
+
+    box-shadow:
+        0 14px 38px
+        rgba(0, 0, 0, 0.08);
+}
+
+.mailing-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.55rem;
+}
+
+.mailing-card-intro {
+    margin-bottom: 28px;
+
+    color: #646464;
+
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   Form
+   ========================================================= */
+
+.mailing-form {
+    display: grid;
+
+    gap: 20px;
+}
+
+.mailing-field {
+    display: grid;
+
+    gap: 7px;
+}
+
+.mailing-field label {
+    color: var(--text-dark);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.mailing-field input {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid
+        rgba(17, 17, 17, 0.18);
+
+    border-radius: 10px;
+
+    background: var(--white);
+    color: var(--text-dark);
+
+    font: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.mailing-field input::placeholder {
+    color: #949494;
+}
+
+.mailing-field input:focus {
+    border-color: var(--scarlet);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(204, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   Submit Button
+   ========================================================= */
+
+.mailing-submit {
+    width: 100%;
+
+    min-height: 52px;
+
+    margin-top: 4px;
+
+    padding: 14px 22px;
+
+    border: 1px solid transparent;
+
+    border-radius: 999px;
+
+    background: var(--scarlet);
+    color: var(--white);
+
+    font: inherit;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.mailing-submit:hover,
+.mailing-submit:focus-visible {
+    background: var(--scarlet-light);
+
+    transform: translateY(-2px);
+}
+
+.mailing-submit:focus-visible {
+    outline: 2px solid var(--scarlet);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   Privacy Text
+   ========================================================= */
+
+.mailing-privacy {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 0.79rem;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   More Options Divider
+   ========================================================= */
+
+.mailing-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 32px 0 24px;
+
+    color: #777777;
+
+    font-size: 0.74rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.mailing-divider::before,
+.mailing-divider::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: var(--light-border);
+}
+
+
+/* =========================================================
+   Bottom Buttons
+   ========================================================= */
+
+.mailing-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.mailing-action-button {
+    min-height: 49px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Return Home */
+
+.mailing-home-button {
+    border:
+        1px solid
+        rgba(17, 17, 17, 0.18);
+
+    background: transparent;
+
+    color: var(--text-dark);
+}
+
+.mailing-home-button:hover,
+.mailing-home-button:focus-visible {
+    border-color: var(--scarlet);
+
+    color: var(--scarlet);
+
+    transform: translateY(-2px);
+}
+
+
+/* Become a Member */
+
+.mailing-member-button {
+    border: 1px solid var(--black);
+
+    background: var(--black);
+
+    color: var(--white);
+}
+
+.mailing-member-button:hover,
+.mailing-member-button:focus-visible {
+    background: var(--black-soft);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   Membership Note
+   ========================================================= */
+
+.mailing-member-note {
+    margin: 13px 0 0;
+
+    color: #777777;
+
+    font-size: 0.78rem;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .mailing-section {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .mailing-layout {
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+    }
+
+    .mailing-copy {
+        max-width: 680px;
+
+        padding-top: 0;
+    }
+
+    .mailing-card {
+        max-width: 680px;
+    }
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .mailing-section {
+        padding-top: 52px;
+        padding-bottom: 60px;
+    }
+
+    .mailing-layout {
+        gap: 32px;
+    }
+
+    .mailing-copy-text {
+        font-size: 1rem;
+    }
+
+    .mailing-benefits {
+        margin-top: 24px;
+    }
+
+    .mailing-card {
+        padding: 24px 20px;
+
+        border-radius: 14px;
+    }
+
+    .mailing-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mailing-submit,
+    .mailing-action-button,
+    .mailing-field input {
+        transition: none;
+    }
+}
