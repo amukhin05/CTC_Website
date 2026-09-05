@@ -1921,3 +1921,31 @@ h3 {
         transition: none;
     }
 }
+/* Mailing-list form feedback and bot trap */
+.mailing-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.mailing-submit:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.mailing-status {
+    min-height: 1.4em;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.mailing-status-success {
+    font-weight: 600;
+}
+
+.mailing-status-error {
+    font-weight: 600;
+}

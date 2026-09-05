@@ -187,22 +187,11 @@
                     </p>
 
 
-                    <!--
-                        MAILING LIST PROVIDER
-
-                        Replace YOUR_MAILING_LIST_FORM_ACTION with
-                        the form action provided by your mailing-list
-                        service.
-
-                        Your provider may also require different
-                        "name" attributes for the fields.
-                    -->
-
                     <form
                         class="mailing-form"
-                        action="YOUR_MAILING_LIST_FORM_ACTION"
+                        id="mailing-list-form"
+                        action="/api/subscribe"
                         method="post"
-                        target="_blank"
                     >
 
 
@@ -246,14 +235,22 @@
                         </div>
 
 
+                        <!-- Spam trap: real visitors never see or fill this field -->
+                        <div class="mailing-honeypot" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                        </div>
+
                         <!-- Submit -->
 
                         <button
                             class="mailing-submit"
                             type="submit"
                         >
-                            Join the mailing list
+                            <span class="mailing-submit-label">Join the mailing list</span>
                         </button>
+
+                        <p id="mailing-status" class="mailing-status" role="status" aria-live="polite"></p>
 
 
                         <p class="mailing-privacy">
@@ -360,7 +357,7 @@
                         WhatsApp
                     </a>
 
-                    <a href="mailto:your-email@bu.edu">
+                    <a href="mailto:bucommodities@gmail.com">
                         Email
                     </a>
 
@@ -396,6 +393,46 @@
         </div>
 
     </footer>
+
+    <script>
+        const mailingForm = document.getElementById("mailing-list-form");
+        const mailingStatus = document.getElementById("mailing-status");
+        const mailingButton = mailingForm.querySelector(".mailing-submit");
+        const mailingButtonLabel = mailingForm.querySelector(".mailing-submit-label");
+
+        mailingForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            mailingStatus.textContent = "";
+            mailingStatus.className = "mailing-status";
+            mailingButton.disabled = true;
+            mailingButtonLabel.textContent = "Joining…";
+
+            try {
+                const response = await fetch(mailingForm.action, {
+                    method: "POST",
+                    body: new FormData(mailingForm),
+                    headers: { "Accept": "application/json" }
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.message || "We couldn't add you right now. Please try again.");
+                }
+
+                mailingForm.reset();
+                mailingStatus.textContent = result.message || "You're on the list! Check your inbox for a welcome email.";
+                mailingStatus.classList.add("mailing-status-success");
+            } catch (error) {
+                mailingStatus.textContent = error.message || "Something went wrong. Please try again.";
+                mailingStatus.classList.add("mailing-status-error");
+            } finally {
+                mailingButton.disabled = false;
+                mailingButtonLabel.textContent = "Join the mailing list";
+            }
+        });
+    </script>
 
 </body>
 
