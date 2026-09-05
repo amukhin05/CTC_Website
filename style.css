@@ -464,6 +464,15 @@ h3 {
     gap: 30px;
 }
 
+.constitution-link {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.constitution-link:hover {
+    color: #004999;
+}
+
 /* News section */
 
 .news-list {
