@@ -6,6 +6,8 @@
     --scarlet: #cc0000;
     --scarlet-dark: #a00000;
     --scarlet-light: #e32636;
+    --scarlet-on-dark: #ff8791;
+    --scarlet-on-photo: #ffd0d4;
 
     --white: #ffffff;
     --off-white: #f7f7f7;
@@ -131,7 +133,7 @@ h3 {
 }
 
 .nav-links a:hover {
-    color: var(--scarlet-light);
+    color: var(--scarlet-on-dark);
 }
 
 /* Hero */
@@ -245,7 +247,7 @@ h3 {
 
 .eyebrow {
     margin-bottom: 14px;
-    color: var(--scarlet-light);
+    color: var(--scarlet-on-dark);
     font-size: 0.95rem;
     font-weight: 800;
     letter-spacing: 0.12em;
@@ -254,6 +256,10 @@ h3 {
 
 .eyebrow.dark {
     color: var(--scarlet-dark);
+}
+
+.hero .eyebrow {
+    color: var(--scarlet-on-photo);
 }
 
 /* Buttons */
@@ -297,7 +303,7 @@ h3 {
 
 .button-outline:hover {
     border-color: var(--scarlet-light);
-    color: var(--scarlet-light);
+    color: var(--white);
 }
 
 .button-dark {
@@ -375,7 +381,7 @@ h3 {
 }
 
 .card-number {
-    color: var(--scarlet-light) !important;
+    color: var(--scarlet-on-dark) !important;
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.16em;
@@ -404,7 +410,7 @@ h3 {
 }
 
 .section-dark .light-card .card-number {
-    color: var(--scarlet-light) !important;
+    color: var(--scarlet-on-dark) !important;
 }
 
 .section-light .dark-list-card {
@@ -453,8 +459,9 @@ h3 {
     color: var(--scarlet-light);
 }
 
-.light-link {
-    color: var(--scarlet-light);
+.light-link,
+.light-link:hover {
+    color: var(--scarlet-on-dark);
 }
 
 .section-heading-row {
@@ -496,6 +503,10 @@ h3 {
     font-weight: 800;
     letter-spacing: 0.14em;
     text-transform: uppercase;
+}
+
+.news-item span {
+    color: var(--scarlet-on-dark);
 }
 
 .news-item h3,
@@ -626,7 +637,7 @@ h3 {
 }
 
 .join-card span {
-    color: var(--scarlet-light);
+    color: var(--scarlet-on-dark);
     font-weight: 800;
 }
 
@@ -707,7 +718,7 @@ h3 {
     place-items: center;
     border-radius: 10px;
     background: var(--black-card);
-    color: rgba(255, 255, 255, 0.38);
+    color: rgba(255, 255, 255, 0.47);
     font-weight: 700;
 }
 
@@ -857,7 +868,7 @@ h3 {
 }
 
 .simple-list a:hover strong {
-    color: var(--scarlet-light);
+    color: var(--scarlet-on-dark);
 }
 
 .simple-list span {
@@ -866,7 +877,7 @@ h3 {
 }
 
 .news-link {
-    color: var(--scarlet-light);
+    color: var(--scarlet-on-dark);
     font-weight: 700;
 }
 
@@ -913,7 +924,7 @@ h3 {
 }
 
 .footer-links a:hover {
-    color: var(--scarlet-light);
+    color: var(--scarlet-on-dark);
 }
 
 .footer-brand {
@@ -1249,7 +1260,7 @@ h3 {
     .mobile-menu-links a:hover,
     .mobile-menu-links a:focus-visible {
         background: rgba(255, 255, 255, 0.07);
-        color: var(--scarlet-light);
+        color: var(--scarlet-on-dark);
     }
 
     .logo {
@@ -1646,7 +1657,7 @@ h3 {
 }
 
 .mailing-field input::placeholder {
-    color: #949494;
+    color: #6f6f6f;
 }
 
 .mailing-field input:focus {
@@ -1710,7 +1721,7 @@ h3 {
 .mailing-privacy {
     margin: 0;
 
-    color: #777777;
+    color: #737373;
 
     font-size: 0.79rem;
     line-height: 1.55;
@@ -1730,7 +1741,7 @@ h3 {
 
     margin: 32px 0 24px;
 
-    color: #777777;
+    color: #737373;
 
     font-size: 0.74rem;
     font-weight: 800;
@@ -1837,7 +1848,7 @@ h3 {
 .mailing-member-note {
     margin: 13px 0 0;
 
-    color: #777777;
+    color: #737373;
 
     font-size: 0.78rem;
 
@@ -1948,4 +1959,57 @@ h3 {
 
 .mailing-status-error {
     font-weight: 600;
+}
+
+/* =========================================================
+   UNDER CONSTRUCTION PAGE
+   ========================================================= */
+
+.construction-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(204, 0, 0, 0.15),
+            transparent 35%
+        ),
+        var(--black);
+
+    color: var(--white);
+}
+
+.construction-content {
+    max-width: 760px;
+}
+
+.construction-content h1 {
+    margin-bottom: 24px;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+}
+
+.construction-text {
+    max-width: 600px;
+    margin-bottom: 34px;
+
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 560px) {
+
+    .construction-page {
+        text-align: center;
+    }
+
+    .construction-content h1 {
+        font-size: 3rem;
+    }
+
+    .construction-text {
+        font-size: 1rem;
+    }
 }
