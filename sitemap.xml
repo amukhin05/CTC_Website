@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bucommodities.pages.dev/</loc></url>
-  <url><loc>https://bucommodities.pages.dev/about.html</loc></url>
-  <url><loc>https://bucommodities.pages.dev/notes.html</loc></url>
-  <url><loc>https://bucommodities.pages.dev/challenges.html</loc></url>
-  <url><loc>https://bucommodities.pages.dev/competitions.html</loc></url>
-  <url><loc>https://bucommodities.pages.dev/resources.html</loc></url>
-  <url><loc>https://bucommodities.pages.dev/privacy.html</loc></url>
-  <url><loc>https://bucommodities.pages.dev/terms.html</loc></url>
-  <url><loc>https://bucommodities.pages.dev/accessibility.html</loc></url>
-  <url><loc>https://bucommodities.pages.dev/constitution.pdf</loc></url>
+  <url><loc>https://buctc.org/</loc></url>
+  <url><loc>https://buctc.org/about.html</loc></url>
+  <url><loc>https://buctc.org/accessibility.html</loc></url>
+  <url><loc>https://buctc.org/challenges.html</loc></url>
+  <url><loc>https://buctc.org/competitions.html</loc></url>
+  <url><loc>https://buctc.org/mailing-list.html</loc></url>
+  <url><loc>https://buctc.org/notes.html</loc></url>
+  <url><loc>https://buctc.org/privacy.html</loc></url>
+  <url><loc>https://buctc.org/resources.html</loc></url>
+  <url><loc>https://buctc.org/terms.html</loc></url>
+  <url><loc>https://buctc.org/constitution.pdf</loc></url>
 </urlset>

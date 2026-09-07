@@ -1014,6 +1014,19 @@ h3 {
     color: white;
 }
 
+.error-page .button-row .button {
+    height: 52px;
+    min-height: 52px;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-page .button-dark {
+    margin-top: 0;
+}
+
 @media (max-width: 700px) {
     .footer-nav {
         align-items: flex-start;

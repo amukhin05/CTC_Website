@@ -1,87 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Page Not Found | BU Commodities Trading Club</title>
-    <link rel="icon" type="image/png" sizes="any" href="favicon.png">
+
+    <link rel="icon" type="image/png" sizes="any" href="/favicon.png">
+
     <meta name="description" 
         content="The requested page could not be found on the BU Commodities Trading Club website.">
+
     <meta name="robots" content="noindex, follow">
-    
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
+
 <header class="site-header">
     <nav class="navbar container">
-        <a class="logo" href="index.html">
-            <img class="logo-image" src="images/bu-logo.jpg" alt="Boston University logo">
+
+        <details class="mobile-menu">
+            <summary aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </summary>
+
+            <div class="mobile-menu-links">
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/notes.html">Meeting Notes</a>
+                <a href="/competitions.html">Competitions</a>
+                <a href="/challenges.html">Challenges</a>
+                <a href="/resources.html">Resources</a>
+            </div>
+        </details>
+
+        <a class="logo" href="/">
+            <img 
+                class="logo-image" 
+                src="/images/bu-logo.jpg" 
+                alt="Boston University logo"
+            >
+
             <span class="club-brand-copy">
                 <strong>Commodities Trading Club</strong>
             </span>
         </a>
-        
+
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="notes.html">Meeting Notes</a>
-            <a href="competitions.html">Competitions</a>
-            <a href="challenges.html">Challenges</a>
-            <a href="resources.html">Resources</a>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/notes.html">Meeting Notes</a>
+            <a href="/competitions.html">Competitions</a>
+            <a href="/challenges.html">Challenges</a>
+            <a href="/resources.html">Resources</a>
         </div>
+
     </nav>
 </header>
 
+
 <main>
-    
-    <section class="section section-light legal-page">
+
+    <section class="section section-light legal-page error-page">
+
         <div class="container legal-container">
+
             <p class="eyebrow dark">404</p>
-            
+
             <h1>Page not found.</h1>
-            
+
             <p>
-                The page you were looking for could not be found. 
+                The page you were looking for could not be found.
                 It may have moved, or the address may be incorrect.
             </p>
-            
+
             <div class="button-row">
-                <a class="button button-dark" href="index.html">Return Home</a>
-                <a class="button button-outline-dark" href="resources.html">Browse Resources</a>
+
+                <a 
+                    class="button button-red" 
+                    href="/"
+                >
+                    Return Home
+                </a>
+
+                <a 
+                    class="button button-dark" 
+                    href="/resources.html"
+                >
+                    Browse Resources
+                </a>
+
             </div>
+
         </div>
+
     </section>
+
 </main>
 
+
 <footer class="site-footer">
+
     <div class="container footer-layout">
+
         <div class="footer-brand">
-            <img src="images/club-logo.jpg" alt="" class="footer-logo" loading="lazy">
+
+            <img 
+                src="/images/club-logo.jpg" 
+                alt="" 
+                class="footer-logo" 
+                loading="lazy"
+            >
+
             <div>
                 <p class="footer-title">BU Commodities Trading Club</p>
                 <p>A student organization at Boston University.</p>
             </div>
+
         </div>
 
         <div class="footer-nav">
+
             <div class="footer-links">
-                <a href="https://www.linkedin.com/company/bu-commodities-trading-club/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://chat.whatsapp.com/Js0UxszstiD2Dkolu4axRU?mode=gi_t">WhatsApp</a>
-                <a href="mailto:bucommodities@gmail.com">Email</a>
+
+                <a 
+                    href="https://www.linkedin.com/company/bu-commodities-trading-club/posts/?feedView=all" 
+                    target="_blank" 
+                    rel="noopener"
+                >
+                    LinkedIn
+                </a>
+
+                <a href="https://chat.whatsapp.com/Js0UxszstiD2Dkolu4axRU?mode=gi_t">
+                    WhatsApp
+                </a>
+
+                <a href="mailto:bucommodities@gmail.com">
+                    Email
+                </a>
+
             </div>
 
             <div class="footer-legal">
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-                <a href="accessibility.html">Accessibility</a>
-                <a href="constitution.pdf" target="_blank" rel="noopener">Constitution</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+                <a href="/accessibility.html">Accessibility</a>
+
+                <a 
+                    href="/constitution.pdf" 
+                    target="_blank" 
+                    rel="noopener"
+                >
+                    Constitution
+                </a>
             </div>
+
         </div>
+
     </div>
+
 </footer>
 
 </body>
