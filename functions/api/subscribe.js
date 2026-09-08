@@ -22,7 +22,6 @@ export async function onRequestPost(context) {
         return json({ message: "Invalid form submission." }, 400);
     }
 
-    // Honeypot. Bots often fill hidden fields; humans should leave this blank.
     if (String(form.get("website") || "").trim()) {
         return json({ message: "You're on the list! Check your inbox for a welcome email." });
     }
@@ -34,7 +33,6 @@ export async function onRequestPost(context) {
         return json({ message: "Please enter your name." }, 400);
     }
 
-    // Browser validation is helpful, but validate again on the server.
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email) || email.length > 254) {
         return json({ message: "Please enter a valid email address." }, 400);
