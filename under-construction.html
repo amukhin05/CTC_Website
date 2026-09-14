@@ -24,12 +24,23 @@
                 Check back soon for updates.
             </p>
 
-            <a href="index.html" class="button button-red">
-                Return Home
-            </a>
+            <button type="button" class="button button-red" id="return-previous-page">
+                Return to previous page
+            </button>
 
         </div>
     </main>
+
+    <script>
+        document.getElementById("return-previous-page").addEventListener("click", () => {
+            if (window.history.length > 1) {
+                window.history.back();
+                return;
+            }
+
+            window.location.href = "index.html";
+        });
+    </script>
 
 </body>
 </html>

@@ -108,6 +108,16 @@ h3 {
     line-height: 1.15;
 }
 
+.logo-image-link {
+    display: block;
+    flex: 0 0 auto;
+}
+
+.logo-image-link:focus-visible {
+    outline: 3px solid var(--scarlet-on-dark);
+    outline-offset: 4px;
+}
+
 .logo-image {
     height: 42px;
     width: auto;
@@ -277,6 +287,9 @@ h3 {
     padding: 14px 22px;
     border: 1px solid transparent;
     border-radius: 999px;
+    appearance: none;
+    cursor: pointer;
+    font: inherit;
     font-weight: 800;
     transition: 0.2s ease;
 }
@@ -993,6 +1006,23 @@ h3 {
     font-size: 1.45rem;
 }
 
+.legal-container .legal-section-heading {
+    color: inherit;
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1.35rem;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+.legal-container .legal-subsection-heading {
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    font-size: 1em;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
 .legal-container p {
     line-height: 1.75;
     margin-bottom: 16px;
@@ -1532,8 +1562,11 @@ h3 {
     padding-top: 12px;
 }
 
+.mailing-copy h1,
 .mailing-copy h2 {
     margin-bottom: 24px;
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    letter-spacing: -0.055em;
 }
 
 .mailing-copy-text {
