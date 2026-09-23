@@ -3,83 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mailing List | BU Commodities Trading Club</title>
-
-    <meta
-        name="description"
-        content="Join the BU Commodities Trading Club mailing list for meeting reminders, club announcements, events, competitions, and updates."
-    >
-
+    <meta name="description" content="Join the BU Commodities Trading Club mailing list for meeting reminders, club announcements, events, competitions, and updates.">
     <link rel="icon" type="image/png" href="favicon.png" sizes="any">
-
+    
     <link rel="canonical" href="https://buctc.org/mailing-list">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Same fonts as the rest of the website -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
+<header class="site-header">
+    <nav class="navbar container">
+        <details class="mobile-menu">
+            <summary aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </summary>
 
-    <!-- =========================================================
-         Header / Navigation
-         ========================================================= -->
-
-    <header class="site-header">
-
-        <nav class="navbar container">
-
-            <details class="mobile-menu">
-
-                <summary aria-label="Open navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </summary>
-
-                <div class="mobile-menu-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="notes.html">Meeting Notes</a>
-                    <a href="competitions.html">Competitions</a>
-                    <a href="challenges.html">Challenges</a>
-                    <a href="resources.html">Resources</a>
-                </div>
-
-            </details>
-
-
-            <div class="logo">
-                <a class="logo-image-link" href="https://terriercentral.bu.edu/" aria-label="Visit BU student organizations website">
-
-                <img
-                    class="logo-image"
-                    src="images/bu-logo.jpg"
-                    alt="Boston University logo"
-                >
-                </a>
-
-                <span class="club-brand-copy">
-                    <strong>Commodities Trading Club</strong>
-                </span>
-
-            </div>
-
-
-            <div class="nav-links">
+            <div class="mobile-menu-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="notes.html">Meeting Notes</a>
@@ -87,355 +33,193 @@
                 <a href="challenges.html">Challenges</a>
                 <a href="resources.html">Resources</a>
             </div>
-
-        </nav>
-
-    </header>
-
-
-    <!-- =========================================================
-         Main Content
-         ========================================================= -->
-
-    <main>
-
-        <section class="section mailing-section">
-
-            <div class="container mailing-layout">
-
-
-                <!-- =================================================
-                     Left Column
-                     ================================================= -->
-
-                <div class="mailing-copy">
-
-                    <p class="eyebrow dark">
-                        Club Updates
-                    </p>
-
-                    <h1>
-                        Stay in the loop.
-                    </h1>
-
-                    <p class="mailing-copy-text">
-                        Our mailing list is the easiest way to keep up
-                        with upcoming meetings, club events, competitions,
-                        market discussions, and other opportunities.
-                    </p>
-
-
-                    <div class="mailing-benefits">
-
-                        <div class="mailing-benefit">
-
-                            <span
-                                class="mailing-benefit-marker"
-                                aria-hidden="true"
-                            ></span>
-
-                            <span>
-                                Meeting reminders and announcements
-                            </span>
-
-                        </div>
-
-
-                        <div class="mailing-benefit">
-
-                            <span
-                                class="mailing-benefit-marker"
-                                aria-hidden="true"
-                            ></span>
-
-                            <span>
-                                Club events and competition opportunities
-                            </span>
-
-                        </div>
-
-
-                        <div class="mailing-benefit">
-
-                            <span
-                                class="mailing-benefit-marker"
-                                aria-hidden="true"
-                            ></span>
-
-                            <span>
-                                Updates from the Commodities Trading Club
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =================================================
-                     Signup Card
-                     ================================================= -->
-
-                <div class="mailing-card">
-
-                    <h3>
-                        Sign up for updates
-                    </h3>
-
-                    <p class="mailing-card-intro">
-                        Enter your information below to join the club
-                        mailing list.
-                    </p>
-
-
-                    <form
-                        class="mailing-form"
-                        id="mailing-list-form"
-                        action="/api/subscribe"
-                        method="post"
-                    >
-
-
-                        <!-- Name -->
-
-                        <div class="mailing-field">
-
-                            <label for="name">
-                                Name
-                            </label>
-
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                autocomplete="name"
-                                placeholder="Your name"
-                                required
-                            >
-
-                        </div>
-
-
-                        <!-- Email -->
-
-                        <div class="mailing-field">
-
-                            <label for="email">
-                                Email address
-                            </label>
-
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                autocomplete="email"
-                                placeholder="you@bu.edu"
-                                required
-                            >
-
-                        </div>
-
-
-                        <!-- Spam trap: real visitors never see or fill this field -->
-                        <div class="mailing-honeypot" aria-hidden="true">
-                            <label for="website">Website</label>
-                            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-                        </div>
-
-                        <!-- Submit -->
-
-                        <button
-                            class="mailing-submit"
-                            type="submit"
-                        >
-                            <span class="mailing-submit-label">Join the mailing list</span>
-                        </button>
-
-                        <p id="mailing-status" class="mailing-status" role="status" aria-live="polite"></p>
-
-
-                        <p class="mailing-privacy">
-                            By signing up, you agree to receive emails
-                            from the BU Commodities Trading Club.
-                            You can unsubscribe at any time.
-                        </p>
-
-                    </form>
-
-
-                    <!-- =================================================
-                         Other Actions
-                         ================================================= -->
-
-                    <div class="mailing-divider">
-                        More options
-                    </div>
-
-
-                    <div class="mailing-actions">
-
-                        <a
-                            class="mailing-action-button mailing-home-button"
-                            href="index.html"
-                        >
-                            ← Return home
-                        </a>
-
-
-                        <!--
-                            Replace this URL with the real
-                            official membership URL.
-                        -->
-
-                        <a
-                            class="mailing-action-button mailing-member-button"
-                            href="https://terriercentral.bu.edu/home_login"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Become a member ↗
-                        </a>
-
-                    </div>
-
-
-                    <p class="mailing-member-note">
-                        Official membership opens on an external website.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================================================
-         Footer
-         ========================================================= -->
-
-    <footer class="site-footer">
-
-        <div class="container footer-layout">
-
-            <div class="footer-brand">
-
-                <img
-                    src="images/club-logo.jpg"
-                    alt=""
-                    class="footer-logo"
-                    loading="lazy"
-                >
-
-                <div>
-                    <p class="footer-title">
-                        BU Commodities Trading Club
-                    </p>
-
-                    <p>
-                        A student organization at Boston University.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="footer-nav">
-
-                <div class="footer-links">
-
-                    <a
-                        href="https://www.linkedin.com/company/bu-commodities-trading-club/posts/?feedView=all"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        LinkedIn
-                    </a>
-
-                    <a href="https://chat.whatsapp.com/Js0UxszstiD2Dkolu4axRU?mode=gi_t">
-                        WhatsApp
-                    </a>
-
-                    <a href="mailto:bucommodities@gmail.com">
-                        Email
-                    </a>
-
-                </div>
-
-
-                <div class="footer-legal">
-
-                    <a href="privacy.html">
-                        Privacy
-                    </a>
-
-                    <a href="terms.html">
-                        Terms
-                    </a>
-
-                    <a href="accessibility.html">
-                        Accessibility
-                    </a>
-
-                    <a
-                        href="constitution.pdf"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        Constitution
-                    </a>
-
-                </div>
-
-            </div>
-
+        </details>
+        <div class="logo">
+            <a class="logo-image-link" href="https://terriercentral.bu.edu/" aria-label="Visit BU student organizations website">
+            <img class="logo-image" src="images/bu-logo.jpg" alt="Boston University logo">
+            </a>
+            <span class="club-brand-copy">
+                <strong>Commodities Trading Club</strong>
+            </span>
         </div>
 
-    </footer>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="notes.html">Meeting Notes</a>
+            <a href="competitions.html">Competitions</a>
+            <a href="challenges.html">Challenges</a>
+            <a href="resources.html">Resources</a>
+        </div>
+    </nav>
+</header>
 
-    <script>
-        const mailingForm = document.getElementById("mailing-list-form");
-        const mailingStatus = document.getElementById("mailing-status");
-        const mailingButton = mailingForm.querySelector(".mailing-submit");
-        const mailingButtonLabel = mailingForm.querySelector(".mailing-submit-label");
+<main>
+    <section class="section mailing-section">
+        <div class="container mailing-layout">
 
-        mailingForm.addEventListener("submit", async (event) => {
-            event.preventDefault();
+            <div class="mailing-copy">
+                <p class="eyebrow dark"></p>Club Updates</p>
 
-            mailingStatus.textContent = "";
-            mailingStatus.className = "mailing-status";
-            mailingButton.disabled = true;
-            mailingButtonLabel.textContent = "Joining…";
+                <h1>
+                    Stay in the loop.
+                </h1>
 
-            try {
-                const response = await fetch(mailingForm.action, {
-                    method: "POST",
-                    body: new FormData(mailingForm),
-                    headers: { "Accept": "application/json" }
-                });
+                <p class="mailing-copy-text">
+                    Our mailing list is the easiest way to keep up with 
+                    upcoming meetings, club events, competitions, market 
+                    discussions, and other opportunities.
+                </p>
 
-                const result = await response.json();
+                <div class="mailing-benefits">
+                    <div class="mailing-benefit">
+                        <span class="mailing-benefit-marker" aria-hidden="true"></span>
+                        <span>Meeting reminders and announcements</span>
+                    </div>
 
-                if (!response.ok) {
-                    throw new Error(result.message || "We couldn't add you right now. Please try again.");
-                }
+                    <div class="mailing-benefit">
+                        <span class="mailing-benefit-marker" aria-hidden="true"></span>
+                        <span>Club events and competition opportunities</span>
+                    </div>
 
-                mailingForm.reset();
-                mailingStatus.textContent = result.message || "You're on the list! Check your inbox for a welcome email.";
-                mailingStatus.classList.add("mailing-status-success");
-            } catch (error) {
-                mailingStatus.textContent = error.message || "Something went wrong. Please try again.";
-                mailingStatus.classList.add("mailing-status-error");
-            } finally {
-                mailingButton.disabled = false;
-                mailingButtonLabel.textContent = "Join the mailing list";
+                    <div class="mailing-benefit">
+                        <span class="mailing-benefit-marker" aria-hidden="true"></span>
+                        <span>Updates from the Commodities Trading Club</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mailing-card">
+                <h3>
+                    Sign up for updates
+                </h3>
+
+                <p class="mailing-card-intro">
+                    Enter your information below to join the club mailing list.
+                </p>
+
+                <form class="mailing-form" id="mailing-list-form" action="/api/subscribe"
+                    method="post">
+
+                    <div class="mailing-field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name"
+                            placeholder="Your name" required>
+                    </div>
+
+                    <div class="mailing-field">
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" autocomplete="email"
+                            placeholder="you@bu.edu" required>
+                    </div>
+
+                    <div class="mailing-honeypot" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input id="website" name="website" type="text" tabindex="-1" 
+                            autocomplete="off">
+                    </div>
+
+                    <button class="mailing-submit" type="submit">
+                        <span class="mailing-submit-label">Join the mailing list</span>
+                    </button>
+
+                    <p id="mailing-status" class="mailing-status" role="status" 
+                        aria-live="polite"></p>
+
+                    <p class="mailing-privacy">
+                        By signing up, you agree to receive emails
+                        from the BU Commodities Trading Club.
+                        You can unsubscribe at any time.
+                    </p>
+                </form>
+
+                <div class="mailing-divider">More options</div>
+
+                <div class="mailing-actions">
+                    <a class="mailing-action-button mailing-home-button" href="index.html">
+                        Return home
+                    </a>
+
+                    <a class="mailing-action-button mailing-member-button" 
+                        href="https://terriercentral.bu.edu/home_login" target="_blank"
+                        rel="noopener noreferrer">
+                        Become a member
+                    </a>
+                </div>
+
+                <p class="mailing-member-note">
+                    Official membership opens on an external website.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-layout">
+        <div class="footer-brand">
+            <img src="images/club-logo.jpg" alt="" class="footer-logo" loading="lazy">
+            <div>
+                <p class="footer-title">BU Commodities Trading Club</p>
+                <p>A student organization at Boston University.</p>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/company/bu-commodities-trading-club/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://chat.whatsapp.com/Js0UxszstiD2Dkolu4axRU?mode=gi_t">WhatsApp</a>
+                <a href="mailto:bucommodities@gmail.com">Email</a>
+            </div>
+
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="accessibility.html">Accessibility</a>
+                <a href="constitution.pdf" target="_blank" rel="noopener">Constitution</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const mailingForm = document.getElementById("mailing-list-form");
+    const mailingStatus = document.getElementById("mailing-status");
+    const mailingButton = mailingForm.querySelector(".mailing-submit");
+    const mailingButtonLabel = mailingForm.querySelector(".mailing-submit-label");
+
+    mailingForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        mailingStatus.textContent = "";
+        mailingStatus.className = "mailing-status";
+        mailingButton.disabled = true;
+        mailingButtonLabel.textContent = "Joining…";
+
+        try {
+            const response = await fetch(mailingForm.action, {
+                method: "POST",
+                body: new FormData(mailingForm),
+                headers: { "Accept": "application/json" }
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || "We couldn't add you right now. Please try again.");
             }
-        });
-    </script>
 
+            mailingForm.reset();
+            mailingStatus.textContent = result.message || "You're on the list! Check your inbox for a welcome email.";
+            mailingStatus.classList.add("mailing-status-success");
+        } catch (error) {
+            mailingStatus.textContent = error.message || "Something went wrong. Please try again.";
+            mailingStatus.classList.add("mailing-status-error");
+        } finally {
+            mailingButton.disabled = false;
+            mailingButtonLabel.textContent = "Join the mailing list";
+        }
+    });
+</script>
 </body>
-
 </html>

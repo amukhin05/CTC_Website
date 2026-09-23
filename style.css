@@ -2,30 +2,20 @@
     --black: #111111;
     --black-soft: #1c1c1c;
     --black-card: #242424;
-
     --scarlet: #cc0000;
     --scarlet-dark: #a00000;
     --scarlet-light: #e32636;
     --scarlet-on-dark: #ff8791;
     --scarlet-on-photo: #ffd0d4;
-
     --white: #ffffff;
     --off-white: #f7f7f7;
     --light-gray: #e5e5e5;
-
+    --ctc-cream: #f4e6d4;
     --text-dark: #171717;
     --text-muted: #666666;
-
     --light-border: rgba(17, 17, 17, 0.14);
     --dark-border: rgba(255, 255, 255, 0.16);
-
     --shadow: 0 16px 42px rgba(0, 0, 0, 0.18);
-
-    /* Club logo palette */
-    --ctc-navy: #0b376f;
-    --ctc-cream: #f4e6d4;
-    --ctc-cream-soft: #fbf5ed;
-    --ctc-logo-border: rgba(244, 230, 212, 0.28);
 }
 
 * {
@@ -332,7 +322,8 @@ h3 {
     padding: 108px 0;
 }
 
-.section-light {
+.section-light,
+.section-gold {
     background: var(--off-white);
     color: var(--text-dark);
 }
@@ -340,11 +331,6 @@ h3 {
 .section-dark {
     background: var(--black);
     color: var(--white);
-}
-
-.section-gold {
-    background: var(--off-white);
-    color: var(--text-dark);
 }
 
 .split-layout,
@@ -1001,6 +987,16 @@ h3 {
     text-decoration: underline;
 }
 
+@media (max-width: 700px) {
+    .footer-nav {
+        align-items: flex-start;
+    }
+
+    .footer-legal {
+        justify-content: flex-start;
+    }
+}
+
 /* Informational, legal, accessibility, and error pages */
 .legal-page {
     min-height: 68vh;
@@ -1008,11 +1004,6 @@ h3 {
 
 .legal-container {
     max-width: 820px;
-}
-
-.legal-container h1 {
-    color: var(--);
-    margin-bottom: 18px;
 }
 
 .legal-container h2 {
@@ -1060,16 +1051,6 @@ h3 {
 
 .error-page .button-dark {
     margin-top: 0;
-}
-
-@media (max-width: 700px) {
-    .footer-nav {
-        align-items: flex-start;
-    }
-
-    .footer-legal {
-        justify-content: flex-start;
-    }
 }
 
 @media (min-width: 901px) {
@@ -1150,26 +1131,9 @@ h3 {
         font-size: 3.4rem;
     }
 
-    .hero-logo-column {
-        margin-top: 12px;
-    }
-
-    .hero-logo-frame {
-        width: min(88vw, 430px);
-        border-radius: 22px;
-    }
-
-    .hero-logo-large {
-        border-radius: 16px;
-    }
-
     .footer-logo {
         width: 62px;
         height: 62px;
-    }
-
-    .hero-content {
-        padding: 80px 0;
     }
 
     .footer-layout {
@@ -1754,6 +1718,32 @@ h3 {
     line-height: 1.55;
 }
 
+/* Mailing-list form feedback and bot trap */
+.mailing-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.mailing-submit:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.mailing-status {
+    min-height: 1.4em;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.mailing-status-success,
+.mailing-status-error {
+    font-weight: 600;
+}
+
 
 /* =========================================================
    More Options Divider
@@ -1958,34 +1948,6 @@ h3 {
     .mailing-field input {
         transition: none;
     }
-}
-/* Mailing-list form feedback and bot trap */
-.mailing-honeypot {
-    position: absolute;
-    left: -10000px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-.mailing-submit:disabled {
-    opacity: 0.65;
-    cursor: wait;
-}
-
-.mailing-status {
-    min-height: 1.4em;
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.45;
-}
-
-.mailing-status-success {
-    font-weight: 600;
-}
-
-.mailing-status-error {
-    font-weight: 600;
 }
 
 /* =========================================================
