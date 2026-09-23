@@ -448,7 +448,7 @@ h3 {
 .team-image {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
-        url("images/team.jpg");
+        url("images/team_photo.jpg");
 }
 
 /* Links */
@@ -719,6 +719,16 @@ h3 {
     font-weight: 700;
 }
 
+.person-photo {
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center 22%;
+    background: var(--black-card);
+}
+
 /* Notes page */
 
 .content-list {
@@ -782,7 +792,7 @@ h3 {
 .competition-page-image {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14)),
-        url("images/competition.jpg");
+        url("images/ucc_cover.JPG");
 }
 
 .pitch-library-intro {
@@ -974,7 +984,7 @@ h3 {
     align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 0.9rem;
+    gap: 0.9rem; 
     font-size: 0.75rem;
     opacity: 0.6;
 }
