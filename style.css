@@ -717,6 +717,15 @@ h3 {
 
 /* Notes page */
 
+#meeting-list > .content-card[hidden],
+.meeting-toggle[hidden] {
+    display: none;
+}
+
+.meeting-toggle {
+    margin-top: 24px;
+}
+
 .content-list {
     display: grid;
     gap: 16px;
