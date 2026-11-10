@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Signup | BU Commodities Trading Club</title>
+    <meta name="description" content="Request to join the BU Commodities Trading Club WhatsApp group. Our team reviews requests before adding members.">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="any">
+    
+    <link rel="canonical" href="https://buctc.org/whatsapp">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="site-header">
+    <nav class="navbar container">
+        <details class="mobile-menu">
+            <summary aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </summary>
+
+            <div class="mobile-menu-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="notes.html">Meeting Notes</a>
+                <a href="competitions.html">Competitions</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="resources.html">Resources</a>
+            </div>
+        </details>
+        <div class="logo">
+            <a class="logo-image-link" href="https://terriercentral.bu.edu/" aria-label="Visit BU student organizations website">
+            <img class="logo-image" src="images/bu-logo.jpg" alt="Boston University logo">
+            </a>
+            <span class="club-brand-copy">
+                <strong>Commodities Trading Club</strong>
+            </span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="notes.html">Meeting Notes</a>
+            <a href="competitions.html">Competitions</a>
+            <a href="challenges.html">Challenges</a>
+            <a href="resources.html">Resources</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="section mailing-section">
+        <div class="container mailing-layout">
+            <div class="mailing-copy">
+                <p class="eyebrow dark">Club Community</p>
+                <h1>Request to join our WhatsApp group.</h1>
+                <p class="mailing-copy-text">
+                    Connect with club members and follow informal updates.
+                    Send us your details so our team can review your request
+                    and add you to the group.
+                </p>
+                <p>
+                    We review requests manually to keep the group focused on
+                    the club. Submitting this form does not automatically add you.
+                </p>
+            </div>
+            <div class="mailing-card">
+                <h3>Request group access</h3>
+                <p class="mailing-card-intro">
+                    Provide your BU email and WhatsApp number for membership review.
+                    This form does not sign you up for emails.
+                </p>
+                <form class="mailing-form" id="whatsapp-request-form"
+                    action="/api/whatsapp-request" method="post">
+                    <div class="mailing-field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name"
+                            maxlength="100" placeholder="Your name" required>
+                    </div>
+                    <div class="mailing-field">
+                        <label for="email">BU email address</label>
+                        <input id="email" name="email" type="email" autocomplete="email"
+                            maxlength="254" placeholder="you@bu.edu" pattern="[^@\s]+@[bB][uU]\.[eE][dD][uU]"
+                            title="Use your Boston University email address ending in @bu.edu" required>
+                    </div>
+                    <div class="mailing-field">
+                        <label for="phone">WhatsApp number</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel"
+                            maxlength="30" placeholder="Include your country code"
+                            aria-describedby="phone-help" required>
+                        <p id="phone-help" class="mailing-privacy">
+                            Enter your WhatsApp number with a + and country code
+                            so we can add you after review (for example, +16175550123).
+                        </p>
+                    </div>
+                    <div class="mailing-honeypot" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input id="website" name="website" type="text" tabindex="-1"
+                            autocomplete="off">
+                    </div>
+                    <p class="mailing-privacy">
+                        By requesting access, you agree that the club may review your
+                        details and add your number to its WhatsApp group. Your BU email
+                        is collected for membership review, not email updates. Group members can see your phone
+                        number. <a href="privacy.html">Privacy details</a>.
+                    </p>
+                    <button class="mailing-submit" type="submit">Request to join</button>
+                    <p id="whatsapp-status" class="mailing-status" role="status"
+                        aria-live="polite"></p>
+                </form>
+                <noscript>
+                    <p>Please enable JavaScript to use this form, or email
+                        <a href="mailto:bucommodities@gmail.com">bucommodities@gmail.com</a>
+                        to request access.</p>
+                </noscript>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-layout">
+        <div class="footer-brand">
+            <img src="images/club-logo.jpg" alt="" class="footer-logo" loading="lazy">
+            <div>
+                <p class="footer-title">BU Commodities Trading Club</p>
+                <p>A student organization at Boston University.</p>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/company/bu-commodities-trading-club/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="whatsapp.html">WhatsApp</a>
+                <a href="mailto:bucommodities@gmail.com">Email</a>
+            </div>
+
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="accessibility.html">Accessibility</a>
+                <a href="documents/club/constitution.pdf" target="_blank" rel="noopener">Constitution</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/whatsapp-request.js" defer></script>
+</body>
+</html>

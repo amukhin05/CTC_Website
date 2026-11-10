@@ -45,3 +45,30 @@ The default Cloudflare Pages domain, `bucommodities.pages.dev`, permanently redi
 **Boston University Commodities Trading Club**
 
 Established 2026
+## WhatsApp Access Requests
+
+All website WhatsApp links lead to `whatsapp.html`, not a public group invite.
+The form requires a name, an `@bu.edu` email, and a WhatsApp phone number with
+country code. The club reviews requests manually; no invite is returned.
+A hidden honeypot is checked on the server. The BU domain check does not prove
+email ownership and the honeypot does not stop every bot.
+
+Configure these Cloudflare Pages environment variables before deploying:
+
+- `MAILERLITE_API_KEY`: reuse the existing secret API key.
+- `MAILERLITE_WHATSAPP_GROUP_ID`: the ID of a new, separate MailerLite group named
+  `WhatsApp requests`. It must differ from `MAILERLITE_GROUP_ID`.
+
+In MailerLite, review Subscribers > Groups > WhatsApp requests. Each request stores
+name, email, and the default `phone` field. Add approved numbers manually in WhatsApp.
+Move reviewed requests out of the pending group if desired. Repeat submissions
+update the same email's subscriber record rather than creating separate records.
+
+This endpoint does not send email or add requests to the newsletter group. Keep
+this group out of newsletter campaigns and email automations, and check MailerLite's
+API/integration double-opt-in settings so these requests do not trigger emails.
+Existing newsletter members keep their existing subscriptions. Phone numbers and
+names are shared subscriber fields, so submitting updates them on that record.
+
+Reset the old group invitation inside WhatsApp so previously copied links stop
+working. The website change alone cannot invalidate an existing invite.
