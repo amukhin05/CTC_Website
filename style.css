@@ -1512,6 +1512,18 @@ h3 {
    Left-Side Content
    ========================================================= */
 
+/* Allow signup content and form fields to shrink on narrow screens. */
+.mailing-layout > *,
+.mailing-field,
+.mailing-field input {
+    min-width: 0;
+}
+
+.mailing-card,
+.mailing-copy {
+    overflow-wrap: anywhere;
+}
+
 .mailing-copy {
     padding-top: 12px;
 }
